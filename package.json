@@ -1,0 +1,21 @@
+{
+  "name": "sps-fullstack",
+  "version": "1.0.0",
+  "description": "Todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/SigmaVlk/sps-fullstack.git)",
+    "seed": "node database/seed.js"
+  },
+  "author": "Jaroslav Josef Černy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
