@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+  <meta charset="UTF-8" />
+  <title>Sklad náhradních dílů</title>
 </head>
-
 <body>
-    <h1>Sklad náhradních dílů</h1>
+  <h1>Sklad náhradních dílů</h1>
 
-    <section>
-        <h2>Přidat nový kus šrotu</h2>
-        <form id="todo-form">
-            <div>
-                <label for="name">Název náhradního dílu:</label>
-                <input type="text" id="name" name="name" required maxlength="100">
-            </div>
-            <div>
-                <label for="description">Popis:</label>
-                <textarea id="description" name="description" maxlength="500"></textarea>
-            </div>
-            <div>
-                <button type="submit">Přidat náhradní díl</button>
-            </div>
-        </form>
-    </section>
+  <!-- ČÁST: FORMULÁŘ pro přidání dílu -->
+  <section>
+    <h2>Přidat nový díl</h2>
+    <form id="part-form">
+      <input type="text" id="part-name" placeholder="Název dílu" required />
+      <input type="text" id="part-number" placeholder="Cislo dílu" required />
+      <button type="submit">Přidat díl</button>
+    </form>
+  </section>
 
-    <section>
-        <h2>Seznam náhradních dílů</h2>
-        <ul id="todo-list">
-            <!-- Zde se budou zobrazovat úkoly -->
-        </ul>
-    </section>
+  <!-- SEZNAM dílů -->
+  <section>
+    <h2>Seznam dílů</h2>
+    <ul id="parts-list"></ul>
+  </section>
 
-    <script src="assets/main.js"></script>
+  <hr />
 
+  <!-- ČÁST: FORMULÁŘ pro přidání dodavatele -->
+  <section>
+    <h2>Přidat nového dodavatele</h2>
+    <form id="supplier-form">
+      <input type="text" id="supplier-name" placeholder="Název dodavatele" required />
+      <input type="text" id="supplier-contact" placeholder="Kontakt" />
+      <button type="submit">Přidat dodavatele</button>
+    </form>
+  </section>
+
+  <!-- SEZNAM dodavatelů -->
+  <section>
+    <h2>Seznam dodavatelů</h2>
+    <ul id="suppliers-list"></ul>
+  </section>
+
+  <!-- SCRIPT -->
+  <script src="assets/main.js"></script>
 </body>
-
 </html>

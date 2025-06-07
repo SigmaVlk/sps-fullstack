@@ -11,13 +11,13 @@ router.get('/parts', (req, res) => {
 });
 // POST /api/parts - vytvořit nový díl
 router.post('/parts', (req, res) => {
-    const { name, description } = req.body;
+    const { name, number } = req.body;
     if (!name || typeof name !== 'string') {
         return res.status(400).json({ error: 'Name is required and must be a string' });
     }
     db.run(
-        'INSERT INTO parts (name, description) VALUES (?, ?)',
-        [name.trim(), description || ''],
+        'INSERT INTO parts (name, number) VALUES (?, ?)',
+        [name.trim(), number || ''],
         function (err) {
             if (err) return res.status(500).json({ error: err.message });
             res.json({ id: this.lastID });
@@ -36,13 +36,13 @@ router.get('/parts/:id', (req, res) => {
 // PUT /api/parts/:id - aktualizace dílu
 router.put('/parts/:id', (req, res) => {
     const id = req.params.id;
-    const { name, description } = req.body;
+    const { name, number } = req.body;
     if (!name || typeof name !== 'string') {
         return res.status(400).json({ error: 'Name is required and must be a string' });
     }
     db.run(
-        'UPDATE parts SET name = ?, description = ? WHERE id = ?',
-        [name.trim(), description || '', id],
+        'UPDATE parts SET name = ?, number = ? WHERE id = ?',
+        [name.trim(), number || '', id],
         function (err) {
             if (err) return res.status(500).json({ error: err.message });
             if (this.changes === 0) return res.status(404).json({ error: 'Part not found' });
