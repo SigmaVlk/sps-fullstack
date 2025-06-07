@@ -1,30 +1,18 @@
 const express = require('express');
-const path = require('path');
-const { initializeDatabase } = require('./database/db');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
+
+const partsRoutes = require('./api/parts');
+const suppliersRoutes = require('./api/suppliers');
+const ordersRoutes = require('./api/orders');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
-// API routes
-const apiRoutes = require('./api/api');
-app.use('/api', apiRoutes);
+app.use('/api/parts', partsRoutes);
+app.use('/api/suppliers', suppliersRoutes);
+app.use('/api/orders', ordersRoutes);
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
