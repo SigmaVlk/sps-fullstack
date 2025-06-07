@@ -3,3 +3,4 @@ package-lock.json
 *.sqlite
 .env
 .DS_Store
+database/database.sqlite
