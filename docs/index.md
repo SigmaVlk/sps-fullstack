@@ -15,11 +15,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Sklad
+    details: přidávání, odebírání a upravování jednotlivých dílů
+  - title: Dodavatélé
+    details: přidávání, odebírání a upravování jednotlivých dodavatelů a jejich kontakt
+  - title: Objednávky
+    details: jendoduché vytváření objednávek
 ---
 
