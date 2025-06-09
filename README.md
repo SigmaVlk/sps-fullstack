@@ -1,10 +1,10 @@
 # Jaroslav Josef Černý
 ---
 ## Zvolené rozšíření
-- Popisek
-- Popisek2
+- VitePress
 ---
 ## Spuštění aplikace
 
-- Popisek
-- Popisek2
+- v terminálu:
+- npm install
+- npm run start
