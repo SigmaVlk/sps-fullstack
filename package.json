@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node database/seed.js",
+    "build:css": "npx @tailwindcss/cli -i public/assets/styles.css -o public/assets/output.css --watch",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -19,8 +20,12 @@
   "author": "Jaroslav Josef Černy",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "@tailwindcss/vite": "^4.1.10",
     "express": "^5.1.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

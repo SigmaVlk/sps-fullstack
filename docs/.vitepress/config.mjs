@@ -1,28 +1,22 @@
-import { defineConfig } from 'vitepress'
-
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
-  title: "Sklad náhradních dílů",
-  description: "jednoduchá aplikace pro správu skladu náhradních dílů automobilů",
+export default {
+  title: "SPS Fullstack Project",
+  description: "Dokumentace fullstack aplikace pro SPS",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Domů", link: "/" },
+      { text: "Struktura", link: "/structure" },
+      { text: "API", link: "/api" },
+      { text: "Databáze", link: "/database" }
     ],
-
     sidebar: [
       {
-        text: 'Examples',
+        text: "Obsah",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: "Struktura projektu", link: "/structure" },
+          { text: "API", link: "/api" },
+          { text: "Databáze", link: "/database" }
         ]
       }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   }
-})
+}
